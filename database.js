@@ -1,6 +1,5 @@
-// database.js
-import sqlite3 from 'sqlite3';
-// or: import { data } from './data.js'; // if using a JS config
+// database.js (CommonJS)
+const sqlite3 = require('sqlite3').verbose();
 
 const db = new sqlite3.Database('database.db', (err) => {
     if (err) {
@@ -11,9 +10,7 @@ const db = new sqlite3.Database('database.db', (err) => {
     }
 });
 
-// Your database initialization logic
 function initializeDatabase() {
-    // Example: create table if not exists
     db.run(`CREATE TABLE IF NOT EXISTS servers_db (
         server_id TEXT PRIMARY KEY,
         user_id TEXT NOT NULL,
@@ -22,4 +19,4 @@ function initializeDatabase() {
     )`);
 }
 
-export default db;
+module.exports = { db };

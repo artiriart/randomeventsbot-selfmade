@@ -7,7 +7,7 @@ const {
     TextDisplayBuilder,
     } = require("discord.js");
 const sqlite3 = require('sqlite3').verbose();
-import { db } from '../database.js';
+const { db } = require('../database.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -37,3 +37,19 @@ module.exports = {
         }
 	},
 };
+
+/* new SectionBuilder()
+    .addComponents(
+        new ContainerBuilder()
+            .setAccentColor('#5865F2')
+            .setSpoiler(false)
+            .addComponents(
+                new SeparatorBuilder(),
+                new SectionBuilder()
+                    .addComponents(
+                        new TextDisplayBuilder()
+                            .setContent('## Server setup complete!\n-# Auto Eggs: ${autoEggs}.')
+                            .setThumbnail(new ThumbnailBuilder().setUrl(client.user.displayAvatarURL()))
+                    )
+            ),
+    ) */
