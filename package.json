@@ -1,0 +1,25 @@
+{
+  "name": "randomeventsbot",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/artiriart/randomeventsbot#readme",
+  "bugs": {
+    "url": "https://github.com/artiriart/randomeventsbot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artiriart/randomeventsbot.git"
+  },
+  "license": "ISC",
+  "author": "artiriart",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "sqlite3": "^5.1.7"
+  }
+}
